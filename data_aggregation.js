@@ -5,10 +5,10 @@ transaction = [
     {"id": 4, "amount": 15.00, "status": "pending"}
 ]
 
-function data_aggregation(records) {
+function dataAggregation(records) {
     return records
     .filter(record => record.status === "completed")
     .reduce((total, record) => total + record.amount, 0);
 }
 
-console.log(data_aggregation(transaction));
+console.log(dataAggregation(transaction));
